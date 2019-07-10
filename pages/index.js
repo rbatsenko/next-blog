@@ -2,10 +2,10 @@ import Layout from '../components/Layout';
 import Link from 'next/link';
 import slugify from '../helpers/slugify';
 
-const PostLink = props => (
+const PostLink = ({ title }) => (
   <li>
-    <Link as={`/${slugify(props.title)}`} href={`/post?title=${props.title}`}>
-      <a>{props.title}</a>
+    <Link as={`/${slugify(title)}`} href={`/post?title=${title}`}>
+      <a>{title}</a>
     </Link>
   </li>
 );
